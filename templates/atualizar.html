@@ -3,29 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Pagina de cadastro</title>
+    <title>Pagina de atualização</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
 <body>
     <div class="container-sm">
-        <h1>Cadastrar Pessoas</h1>
-        <form action="/" method="POST" >
+        <h1>Atualizar Pessoas</h1>
+        <form action='{{variavel[0]["CPF"]}}' method="POST" >
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">CPF</label>
-                <input type="text" class="form-control" id="cpf" name="cpf" aria-describedby="emailHelp">
+                <input type="text" class="form-control" id="cpf" name="cpf" value='{{variavel[0]["CPF"]}}'>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Nome</label>
-                <input type="text" class="form-control" id="nome" name="nome">
+                <input type="text" class="form-control" id="nome" name="nome" value='{{variavel[0]["Nome"]}}'>
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Data de Nascimento</label>
-                <input type="date" class="form-control" id="data" name="data">
+                <input type="date" class="form-control" id="data" name="data" value='{{variavel[0]["DataNascimento"]}}'>
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
-            <a href="/cadastros" class="btn btn-primary">Cadastros</a>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+            <a href="/cadastros" class="btn btn-primary">Voltar</a>
         </form>
        
     </div>

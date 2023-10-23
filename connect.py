@@ -36,5 +36,9 @@ def atualizar_pessoa(cpf: str, model: Pessoa):
     if bd.search(usuario.CPF == str(cpf)):
         bd.remove(usuario.CPF == str(cpf))
         inserir(model)
+        
     else:
         print('Usuario nao encontrado')
+
+def buscar_CPF(cpf):
+    return bd.search(usuario.CPF == str(cpf))
