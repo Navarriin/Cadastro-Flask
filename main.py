@@ -25,6 +25,14 @@ def pessoas_cadastradas():
     variavel = mostrar_todos()
     return render_template('pessoas_cadastradas.html', variavel=variavel) 
     
+@app.route('/deletar/<string:cpf>')
+def deletar(cpf):
+    deletar_pessoa(cpf)
+    return redirect('/cadastros')
+
+@app.route('/atualizar/<string:cpf>')
+def atualizar(cpf):
+    return pessoas_cadastradas()
 
 if __name__ == '__main__':
     app.run(debug=True)

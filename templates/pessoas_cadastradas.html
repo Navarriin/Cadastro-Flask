@@ -17,6 +17,7 @@
                     <th scope="col">CPF</th>
                     <th scope="col">Nome</th>
                     <th scope="col">Data de Nascimento</th>
+                    <th scope="col">Ações</th>
                 </tr>
             </thead>
             {% for item in variavel %}
@@ -25,9 +26,16 @@
                 <th scope="row">{{item["CPF"]}}</th>
                 <td>{{item["Nome"]}}</td>
                 <td>{{item["DataNascimento"]}}</td>
+                <td><a href='/deletar/{{item["CPF"]}}' class="btn btn-danger">Deletar</a></td>
+                <td><a href='/atualizar/{{item["CPF"]}}' class="btn btn-info">Atualizar</a></td>
             </tr>
+
             {% endfor %}
+
         </table>
+    </div>
+    <div class="container-sm">
+        <a href='/' class="btn btn-primary">Voltar</a>
     </div>
 </body>
 

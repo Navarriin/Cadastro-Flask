@@ -26,15 +26,15 @@ def mostrar_tab():
 
 def deletar_pessoa(cpf: str):
     """deleta um usuario no banco de dados"""
-    if bd.search(usuario.CPF == cpf):
-        bd.remove(usuario.CPF==cpf)
+    if bd.search(usuario.CPF == str(cpf)):
+        bd.remove(usuario.CPF == str(cpf))
     else:
         print('Usuario nao encontrado')
 
 def atualizar_pessoa(cpf: str, model: Pessoa):
     """atualiza um usuario no banco de dados"""
-    if bd.search(usuario.CPF == cpf):
-        bd.remove(usuario.CPF==cpf)
+    if bd.search(usuario.CPF == str(cpf)):
+        bd.remove(usuario.CPF == str(cpf))
         inserir(model)
     else:
         print('Usuario nao encontrado')
