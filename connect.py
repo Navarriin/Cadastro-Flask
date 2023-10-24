@@ -10,7 +10,8 @@ def inserir(model: Pessoa):
     bd.insert(
        { 'CPF': model.CPF,
         'Nome': model.nome,
-        'DataNascimento': model.dataNascimento
+        'DataNascimento': model.dataNascimento,
+        'Sexo': model.sexo
         }
     )
     
@@ -41,4 +42,6 @@ def atualizar_pessoa(cpf: str, model: Pessoa):
         print('Usuario nao encontrado')
 
 def buscar_CPF(cpf):
+    """busca a pessoa pelo cpf"""
     return bd.search(usuario.CPF == str(cpf))
+
