@@ -18,6 +18,7 @@
                 <tr align="center">
                     <th scope="col">CPF</th>
                     <th scope="col">Nome</th>
+                    <th scope="col">Sexo</th>
                     <th scope="col">Data de Nascimento</th>
                     <th scope="col">Ações</th>
                 </tr>
@@ -27,6 +28,7 @@
             <tr align="center">
                 <th scope="row">{{item["CPF"]}}</th>
                 <td>{{item["Nome"]}}</td>
+                <td>{{item["Sexo"]}}</td>
                 <td>{{item["DataNascimento"]}}</td>
                 <td>
                     <a href='/deletar/{{item["CPF"]}}' class="btn btn-danger">Deletar</a>
